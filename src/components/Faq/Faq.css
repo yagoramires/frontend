@@ -1,0 +1,41 @@
+.hidden {
+    display: none
+}
+
+.faq__questions {
+    padding: 2rem;
+    border: 2px solid var(--blue);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.right {
+    float: right;
+    cursor: pointer;
+}
+
+.faq__questions__container {
+    display: flex;
+    flex-direction: column;
+}
+
+.faq__question {
+    font-weight: 800;
+}
+
+.faq__question:hover {
+    color: var(--blue);
+}
+
+.faq__answer {
+    margin-left: 1rem;
+    font-style: italic;
+    text-align: justify;
+    width: 90%;
+}
+
+.rotate {
+    transform: rotate(180deg);
+}
