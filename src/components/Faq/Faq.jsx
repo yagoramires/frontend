@@ -1,6 +1,6 @@
 import React from 'react';
 import { useQuery, gql } from '@apollo/client';
-import { AiFillCaretDown } from 'react-icons/ai';
+import { FaAngleUp } from 'react-icons/fa';
 import './Faq.css';
 
 const FAQCOMPONENT = gql`
@@ -22,10 +22,14 @@ export default function Faq() {
   const handleClick = (e) => {
     if (!e.currentTarget.nextElementSibling.className.includes('hidden')) {
       e.currentTarget.nextElementSibling.classList.add('hidden');
-      e.currentTarget.firstElementChild.classList.add('rotate');
+      e.currentTarget.firstElementChild.classList.remove('rotate');
+      e.currentTarget.classList.remove('yellow');
+      e.currentTarget.classList.add('black');
     } else {
       e.currentTarget.nextElementSibling.classList.remove('hidden');
-      e.currentTarget.firstElementChild.classList.remove('rotate');
+      e.currentTarget.firstElementChild.classList.add('rotate');
+      e.currentTarget.classList.remove('black');
+      e.currentTarget.classList.add('yellow');
     }
   };
 
@@ -45,11 +49,11 @@ export default function Faq() {
                 <span className='faq__question' onClick={handleClick}>
                   {question.attributes.question}
                   <span className='right'>
-                    <AiFillCaretDown className='rotate' />
+                    <FaAngleUp className='rotate yellow' />
                   </span>
                 </span>
 
-                <span className={`faq__answer hidden`}>
+                <span className={'faq__answer hidden'}>
                   {question.attributes.answer}
                 </span>
               </div>

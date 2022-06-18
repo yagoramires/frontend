@@ -4,18 +4,23 @@
     align-items: center;
     justify-content: center;
 
-    width: 800px;
-    height: 600px;
+    max-width: 1000px;
+    height: 500px;
     margin: 0 auto;
 
-    border: 10px solid var(--blue);
+    border: 5px solid var(--yellow);
     border-radius: 0.5rem;
 }
 
 
-@media (min-width: 1300px) {
+@media (min-width: 374px) and (max-width: 1000px) {
+
     .location__map {
-        width: 1200px;
-        height: 450px;
+        /* width: 96%; */
+        height: 300px;
+        border: none;
+        border-top: 10px solid #fff;
+        border-bottom: 10px solid #fff;
+        border-radius: 0;
     }
 }

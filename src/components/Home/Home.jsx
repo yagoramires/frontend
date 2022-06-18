@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 import React from 'react';
 import './Home.css';
 import { useQuery, gql } from '@apollo/client';
@@ -46,7 +47,11 @@ export default function Home() {
             <span>{data.homepageConfig.data.attributes.text2}</span>
           </div>
         )}
-        <a href='/' className='home__btn'>
+        <a
+          href='https://www.ingresso.com/home?city=rio-de-janeiro&partnership=home'
+          className='home__btn'
+          target='_blank'
+        >
           BUY A TICKET
         </a>
       </div>

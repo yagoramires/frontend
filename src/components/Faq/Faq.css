@@ -4,11 +4,12 @@
 
 .faq__questions {
     padding: 2rem;
-    border: 2px solid var(--blue);
+    border: 2px solid var(--yellow);
     border-radius: 0.5rem;
     overflow: hidden;
-    width: 90%;
     margin: 0 auto;
+    background-color: #fff;
+
 }
 
 .right {
@@ -21,12 +22,13 @@
     flex-direction: column;
 }
 
+
 .faq__question {
     font-weight: 800;
 }
 
 .faq__question:hover {
-    color: var(--blue);
+    color: var(--yellow);
 }
 
 .faq__answer {
@@ -38,4 +40,20 @@
 
 .rotate {
     transform: rotate(180deg);
+}
+
+.yellow {
+    color: var(--yellow);
+}
+
+.black {
+    color: black !important;
+}
+
+@media (min-width: 374px) and (max-width: 1000px) {
+
+    .faq__questions {
+        border: none;
+        border-radius: 0;
+    }
 }

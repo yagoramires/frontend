@@ -1,0 +1,20 @@
+.code__container p {
+    text-align: justify;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: 1px;
+    margin: 0 auto;
+    font-weight: 500;
+}
+
+@media (min-width: 374px) and (max-width: 1000px) {
+
+    .code__container p {
+        width: 90%;
+        font-size: 1rem;
+        line-height: 1.7rem;
+        letter-spacing: 1px;
+        margin: 0 auto;
+        font-weight: 500;
+    }
+}
